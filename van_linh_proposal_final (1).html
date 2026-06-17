@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo giá Hệ Thống Vận Hành & Sale & Marketing - Vân Linh Mountain Retreat</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C5E43; /* Xanh lá núi rừng thiên nhiên */
+            --primary-light: #E8F0EC;
+            --secondary: #D4AF37; /* Vàng kim sang trọng */
+            --dark: #1A2E22;
+            --light: #F9FBFA;
+            --accent: #DFD3C3; /* Nâu ấm chữa lành */
+            --gray: #64748B;
+            --card-shadow: 0 10px 30px rgba(44, 94, 67, 0.05);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header & Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: var(--light);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0);
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--secondary);
+            backdrop-filter: blur(5px);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            max-width: 900px;
+            margin: 0 auto 20px;
+            line-height: 1.3;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto 20px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .meta-item p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .meta-item h3 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-top: 4px;
+        }
+
+        /* Container & Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            background: rgba(249, 251, 250, 0.8);
+            padding: 10px;
+            border-radius: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            border: none;
+            background: transparent;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(44, 94, 67, 0.3);
+        }
+
+        /* Content Sections */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Intro Grid */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            background: var(--accent);
+            padding: 8px 20px;
+            border-radius: 8px;
+        }
+
+        /* Item Cards */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0,0,0,0.02);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(44, 94, 67, 0.1);
+            border-color: var(--primary-light);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+            color: var(--dark);
+        }
+
+        .card-price {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-weight: 700;
+            color: var(--primary);
+            background: var(--primary-light);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .bullet-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-size: 0.8rem;
+            top: 2px;
+        }
+
+        /* MOODBOARDS & VISUALS */
+        .visual-showcase {
+            background: #f0f4f1;
+            border-radius: 24px;
+            padding: 40px;
+            margin-top: 40px;
+            border: 1px dashed var(--primary);
+        }
+
+        .visual-title {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Moodboard 1: Landing Page Browser Simulation */
+        .browser-mockup {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        .browser-header {
+            background: #f1f5f9;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ef4444;
+        }
+        .circle:nth-child(2) { background: #eab308; }
+        .circle:nth-child(3) { background: #22c55e; }
+        
+        .browser-address {
+            background: white;
+            flex-grow: 1;
+            margin: 0 40px;
+            border-radius: 6px;
+            padding: 4px 15px;
+            font-size: 0.8rem;
+            color: var(--gray);
+            border: 1px solid #e2e8f0;
+        }
+
+        .browser-content {
+            height: 350px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .hero-left {
+            background: var(--dark);
+            color: white;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-left h4 {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-family: serif;
+        }
+
+        .hero-right {
+            background: linear-gradient(rgba(44, 94, 67, 0.4), rgba(26, 46, 34, 0.7)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Moodboard 2: Google Review Slider */
+        .review-slider-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .review-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--primary-light);
+            display: none;
+        }
+
+        .review-card.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .review-stars {
+            color: #f59e0b;
+            margin-bottom: 15px;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .slider-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid var(--primary);
+            background: white;
+            color: var(--primary);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Moodboard 3: OS Internal App Dashboard */
+        .app-mockup {
+            background: #1e1e24;
+            border-radius: 16px;
+            padding: 20px;
+            color: #a9b2c3;
+            font-size: 0.85rem;
+        }
+
+        .app-topbar {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #2d2d39;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .room-status-card {
+            background: #2a2a35;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .room-status-card.clean {
+            border-left-color: #22c55e;
+        }
+
+        .room-status-card.dirty {
+            border-left-color: #ef4444;
+        }
+
+        .status-tag {
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Summary Table & Footer */
+        .summary-box {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            margin-top: 50px;
+            border: 2px solid var(--primary);
+        }
+
+        .total-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .total-table th, .total-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--primary-light);
+        }
+
+        .total-table tr:last-child td {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            border-bottom: none;
+        }
+
+        .exclusions-box {
+            background: #fff8f8;
+            border-left: 4px solid #ef4444;
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin-top: 30px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            .browser-content { grid-template-columns: 1fr; height: auto; }
+            .hero-right { height: 200px; }
+            .app-grid { grid-template-columns: 1fr 1fr; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <span class="badge" data-aos="fade-down">Digital Proposal & Workflow</span>
+        <h1 data-aos="fade-up" data-aos-delay="100">BÁO GIÁ KHỞI TẠO HỆ THỐNG ONLINE, HIỆN DIỆN THƯƠNG HIỆU & TỰ ĐỘNG HOÁ VẬN HÀNH</h1>
+        
+        <div class="meta-grid" data-aos="zoom-in" data-aos-delay="200">
+            <div class="meta-item">
+                <p>Bên cung cấp</p>
+                <h3>AIGen Labs</h3>
+            </div>
+            <div class="meta-item">
+                <p>Bên nhận báo giá</p>
+                <h3>Vân Linh Mountain Retreat</h3>
+            </div>
+            <div class="meta-item">
+                <p>Đơn vị tiền tệ</p>
+                <h3>Việt Nam Đồng (VND)</h3>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- Navigation Menu -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="openTab('tab1', this)">
+                <i class="fa-solid fa-bullseye"></i> 1. Mục tiêu & Tổng quan
+            </button>
+            <button class="tab-btn" onclick="openTab('tab2', this)">
+                <i class="fa-solid fa-palette"></i> 2. Thương Hiệu & Kênh Bán
+            </button>
+            <button class="tab-btn" onclick="openTab('tab3', this)">
+                <i class="fa-solid fa-bullhorn"></i> 3. Kênh Marketing nền tảng
+            </button>
+            <button class="tab-btn" onclick="openTab('tab4', this)">
+                <i class="fa-solid fa-gears"></i> 4. Quy trình Vận Hành Số
+            </button>
+            <button class="tab-btn" onclick="openTab('tab5', this)">
+                <i class="fa-solid fa-file-invoice-dollar"></i> 5. Tổng hợp & Bàn giao
+            </button>
+        </div>
+
+        <!-- TAB 1: MỤC TIÊU TRIỂN KHAI -->
+        <div id="tab1" class="tab-content active">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-compass"></i> Định hướng Chiến Lược & Mục Tiêu</h2>
+                </div>
+            </div>
+            <div class="grid-2">
+                <div class="card" data-aos="fade-up">
+                    <div class="card-icon"><i class="fa-solid fa-hotel"></i></div>
+                    <h3>Hiện diện đa kênh toàn diện</h3>
+                    <p>Đưa Vân Linh Mountain Retreat xuất hiện chuyên nghiệp trên Google Maps, Facebook, Zalo, Airbnb, Booking.com, Agoda.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon"><i class="fa-solid fa-sliders"></i></div>
+                    <h3>Chuẩn hóa cấu trúc vận hành</h3>
+                    <p>Thiết lập hệ thống thông tin phòng, giá, chính sách đồng nhất, loại bỏ tối đa sai sót Overbooking hoặc nhầm lẫn thông tin.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Tự động hóa chuỗi CSKH</h3>
+                    <p>Xây dựng hệ thống kịch bản tin nhắn thông minh chăm sóc khách hàng tự động trước, trong và sau kỳ lưu trú.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Nền móng tăng trưởng bền vững</h3>
+                    <p>Chuẩn bị sẵn sàng tệp dữ liệu, hình ảnh, hạ tầng số để dễ dàng kích hoạt các chiến dịch quảng cáo paid-ads giai đoạn sau.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: THƯƠNG HIỆU & KÊNH BÁN -->
+        <div id="tab2" class="tab-content">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-layer-group"></i> Nhận diện thương hiệu & Khởi tạo kênh bán</h2>
+                </div>
+                <div class="section-price">30.000.000 VND</div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-price">4.500.000đ</div>
+                    <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                    <h3>Thiết kế Logo chính</h3>
+                    <p>Định vị phong cách ẩn cư, thiên nhiên chữa lành.</p>
+                    <ul class="bullet-list">
+                        <li>02-03 Concept phác thảo ban đầu</li>
+                        <li>Đầy đủ định dạng vector cao cấp (AI, SVG, PDF)</li>
+                        <li>Guideline hướng dẫn sử dụng</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-price">4.000.000đ</div>
+                    <div class="card-icon"><i class="fa-solid fa-swatchbook"></i></div>
+                    <h3>Bộ nhận diện thương hiệu cơ bản</h3>
+                    <p>Đồng bộ visual trên toàn bộ nền tảng số.</p>
+                    <ul class="bullet-list">
+                        <li>Bảng màu thương hiệu & Font chữ quy chuẩn</li>
+                        <li>Template bài post, story, bảng giá, thông báo</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-price">16.500.000đ</div>
+                    <div class="card-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                    <h3>Hệ thống OTA & Mạng xã hội</h3>
+                    <p>Cài đặt tối ưu tài khoản bán phòng cốt lõi.</p>
+                    <ul class="bullet-list">
+                        <li>Google Maps & Zalo Business / OA (4.000.000đ)</li>
+                        <li>Facebook Page tích hợp 10K Social Proof (5.000.000đ)</li>
+                        <li>Setup Listing Airbnb, Booking.com, Agoda (7.500.000đ)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-price">5.000.000đ</div>
+                    <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h3>Website Landing Page giới thiệu Retreat</h3>
+                    <p>Trang đích hiển thị thông tin phòng, dịch vụ, vị trí và điều hướng đặt phòng trực tiếp qua Zalo/Messenger theo tiêu chuẩn SEO tối ưu công cụ tìm kiếm qua mạng. </p>
+                </div>
+            </div>
+
+            <!-- VISUAL MOODBOARD FOR LANDING PAGE -->
+            <div class="visual-showcase">
+                <div class="visual-title"><i class="fa-solid fa-eye"></i> MOODBOARD VISUAL: LANDING PAGE PROTOTYPE</div>
+                <div class="browser-mockup">
+                    <div class="browser-header">
+                        <div class="circle"></div><div class="circle"></div><div class="circle"></div>
+                        <div class="browser-address">vanlinhmountainretreat.com</div>
+                    </div>
+                    <div class="browser-content">
+                        <div class="hero-left">
+                            <span style="color:var(--secondary); font-size:0.8rem; text-transform:uppercase; letter-spacing:2px;">Vân Linh Retreat</span>
+                            <h4>Tìm Lại Bình Yên Giữa Mây Ngàn núi rừng</h4>
+                            <p style="font-size:0.85rem; opacity:0.8; margin-bottom:20px;">Trải nghiệm không gian ẩn cư, chữa lành tâm hồn đích thực tại đỉnh Vân Linh.</p>
+                            <button style="background:var(--secondary); border:none; padding:10px 20px; color:white; border-radius:4px; font-weight:600; width:fit-content; cursor:pointer;">Khám Phá Phòng Lưu Trú →</button>
+                        </div>
+                        <div class="hero-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: MARKETING NỀN TẢNG -->
+        <div id="tab3" class="tab-content">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-hashtag"></i> Khởi tạo kênh Marketing nền tảng</h2>
+                </div>
+                <div class="section-price">12.500.000 VND</div>
+            </div>
+
+            <div class="card" data-aos="fade-up" style="margin-bottom:30px;border-left:5px solid var(--secondary);">
+                <div class="card-icon"><i class="fa-solid fa-rocket"></i></div>
+                <h3>🚀 Hệ Thống Tăng Trưởng Nội Dung & SEO 90 Ngày</h3>
+                <p>
+                    <strong>Mục tiêu:</strong> Xây dựng nền tảng truyền thông bền vững giúp Vân Linh Mountain Retreat xuất hiện đồng bộ trên Google, Facebook, Google Maps và các nền tảng OTA, từ đó gia tăng lượng khách hàng tìm kiếm tự nhiên và giảm phụ thuộc vào các kênh quảng cáo trả phí.
+                </p>
+            </div>
+
+            <div class="grid-2">
+                <div class="card" data-aos="fade-up">
+                    <div class="card-price">Chiến lược</div>
+                    <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>📊 Chiến lược Nội dung Đa Kênh</h3>
+                    <p>Hệ thống nội dung được xây dựng xoay quanh 4 trụ cột chính:</p>
+                    <ul class="bullet-list">
+                        <li>🏡 Trải nghiệm lưu trú & phòng nghỉ</li>
+                        <li>☕ Ẩm thực & Coffee Bar</li>
+                        <li>🌿 Trải nghiệm địa phương & văn hóa bản địa</li>
+                        <li>❤️ Câu chuyện thương hiệu & con người Vân Linh Mountain Retreat</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-price">Số lượng</div>
+                    <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+                    <h3>Khối lượng nội dung bàn giao</h3>
+                    <table class="total-table" style="margin-top:15px;font-size:0.9rem;">
+                        <tbody>
+                            <tr>
+                                <td>Bài viết Website chuẩn SEO</td>
+                                <td style="text-align:right;font-weight:700;color:var(--primary);">12 bài</td>
+                            </tr>
+                            <tr>
+                                <td>Bài viết Facebook</td>
+                                <td style="text-align:right;font-weight:700;color:var(--primary);">36 bài</td>
+                            </tr>
+                            <tr>
+                                <td>Story Facebook</td>
+                                <td style="text-align:right;font-weight:700;color:var(--primary);">24 bài</td>
+                            </tr>
+                            <tr>
+                                <td>Google Business Profile Posts</td>
+                                <td style="text-align:right;font-weight:700;color:var(--primary);">12 bài</td>
+                            </tr>
+                            <tr>
+                                <td>Reel / Video Script</td>
+                                <td style="text-align:right;font-weight:700;color:var(--primary);">24 kịch bản</td>
+                            </tr>
+                            <tr>
+                                <td>Bộ từ khóa SEO ngành du lịch nghỉ dưỡng</td>
+                                <td style="text-align:right;font-weight:700;color:var(--primary);">50+ từ khóa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-price">SEO</div>
+                    <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h3>🌐 SEO Foundation Setup</h3>
+                    <p>Thiết lập nền tảng SEO ngay từ đầu để giúp Google hiểu rõ mô hình kinh doanh và nội dung của Vân Linh Mountain Retreat.</p>
+                    <ul class="bullet-list">
+                        <li>Keyword Research</li>
+                        <li>SEO Structure Planning</li>
+                        <li>Meta Title Optimization</li>
+                        <li>Meta Description Optimization</li>
+                        <li>Heading Structure (H1-H2-H3)</li>
+                        <li>Internal Linking Strategy</li>
+                        <li>Structured Data (Schema Markup)</li>
+                        <li>Google Search Console Setup</li>
+                        <li>Google Analytics Integration</li>
+                        <li>Google Business Profile Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-price">Backlink</div>
+                    <div class="card-icon"><i class="fa-solid fa-link"></i></div>
+                    <h3>🔗 Backlink Foundation System</h3>
+                    <p>Xây dựng hệ thống liên kết nền tảng giúp Google xác thực độ tin cậy thương hiệu.</p>
+                    <ul class="bullet-list">
+                        <li>Google Business Profile</li>
+                        <li>Facebook Page</li>
+                        <li>Booking.com</li>
+                        <li>Agoda</li>
+                        <li>Traveloka</li>
+                        <li>Airbnb</li>
+                        <li>Website chính thức</li>
+                    </ul>
+                    <p style="font-size:0.9rem;color:var(--gray);margin-top:12px;">
+                        Mục tiêu: Gia tăng độ uy tín thương hiệu, tăng khả năng xuất hiện trên Google Search và đồng nhất dữ liệu trên toàn bộ hệ sinh thái số.
+                    </p>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-price">Review</div>
+                    <div class="card-icon"><i class="fa-solid fa-star-half-stroke"></i></div>
+                    <h3>⭐ Review Engine & Social Proof</h3>
+                    <p>Thiết lập quy trình thu thập và quản lý đánh giá khách hàng sau lưu trú.</p>
+                    <ul class="bullet-list">
+                        <li>QR Review tại phòng và khu vực dịch vụ</li>
+                        <li>Review Collection Flow</li>
+                        <li>Google Review Request Template</li>
+                        <li>Facebook Review Request Template</li>
+                        <li>SOP xử lý đánh giá tiêu cực</li>
+                        <li>Kịch bản phản hồi Review chuyên nghiệp</li>
+                        <li>Quy trình chuyển đổi khách hàng hài lòng thành người giới thiệu thương hiệu</li>
+                    </ul>
+                </div>
+
+                <div class="card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card-price">90 ngày</div>
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>🎯 Kết Quả Kỳ Vọng Sau 90 Ngày</h3>
+                    <ul class="bullet-list">
+                        <li>Website được Google Index đầy đủ</li>
+                        <li>Hình thành thư viện nội dung nền tảng cho 6–12 tháng vận hành</li>
+                        <li>Gia tăng độ tin cậy thương hiệu trên Google Maps và OTA</li>
+                        <li>Tăng tỷ lệ khách hàng tìm kiếm trực tiếp tên thương hiệu</li>
+                        <li>Tạo nền tảng triển khai quảng cáo Facebook & Google hiệu quả hơn</li>
+                        <li>Giảm phụ thuộc vào OTA trong dài hạn thông qua kênh đặt phòng trực tiếp</li>
+                        <li>Xây dựng tài sản Marketing số có thể tiếp tục phát huy giá trị trong nhiều năm tiếp theo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="visual-showcase" data-aos="fade-up">
+                <div class="visual-title"><i class="fa-solid fa-seedling"></i> LƯU Ý VỀ GIÁ TRỊ DÀI HẠN</div>
+                <div style="background:white;border-radius:18px;padding:30px;box-shadow:var(--card-shadow);border-left:5px solid var(--primary);">
+                    <p style="font-size:0.95rem;color:var(--gray);margin-bottom:12px;">
+                        Đây là giai đoạn khởi tạo nền tảng Marketing & SEO ban đầu cho Vân Linh Mountain Retreat.
+                    </p>
+                    <p style="font-size:0.95rem;color:var(--gray);margin-bottom:12px;">
+                        Các nội dung, bài viết, từ khóa SEO, hệ thống đánh giá khách hàng và cấu trúc truyền thông được xây dựng theo hướng <strong style="color:var(--primary);">“Tài sản số dài hạn (Digital Assets)”</strong>, có khả năng tiếp tục tạo ra giá trị tìm kiếm, nhận diện thương hiệu và khách hàng tiềm năng ngay cả sau khi dự án hoàn thành.
+                    </p>
+                    <p style="font-size:0.95rem;color:var(--gray);">
+                        Khác với quảng cáo trả phí chỉ tạo ra kết quả trong thời gian chạy chiến dịch, hệ thống nội dung và SEO này sẽ tiếp tục tích lũy giá trị theo thời gian, giúp giảm dần chi phí tìm kiếm khách hàng trong tương lai.
+                    </p>
+                </div>
+            </div>
+
+            <!-- VISUAL MOODBOARD FOR GOOGLE MAPS REVIEWS -->
+            <div class="visual-showcase">
+                <div class="visual-title"><i class="fa-solid fa-star"></i> GOOGLE MAP REVIEW SYSTEM (MOTION MOCKUP)</div>
+                <div class="review-slider-container">
+                    <div class="review-card active" id="rev1">
+                        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p style="font-style: italic; margin-bottom: 15px;">"Không gian tuyệt vời để trốn khỏi khói bụi thành phố. Thiết kế tối giản tinh tế, dịch vụ chu đáo từng chi tiết nhỏ. Sẽ chắc chắn quay lại!"</p>
+                        <strong>- Nguyễn Hoàng Long (Khách du lịch Hà Nội)</strong>
+                    </div>
+                    <div class="review-card" id="rev2">
+                        <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <p style="font-style: italic; margin-bottom: 15px;">"Hệ thống đặt phòng rất nhanh chóng qua Zalo, nhận hướng dẫn đường đi chi tiết bằng bản đồ số rất tiện lợi cho nhóm đi tự túc."</p>
+                        <strong>- Minh Trang (Lifestyle Blogger)</strong>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn" onclick="prevReview()"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="slider-btn" onclick="nextReview()"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: QUY TRÌNH VẬN HÀNH -->
+        <div id="tab4" class="tab-content">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-diagram-project"></i> Hệ thống hóa & Số hóa quy trình vận hành nội bộ</h2>
+                </div>
+                <div class="section-price">53.000.000 VND</div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-price">32.000.000đ</div>
+                    <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3>📱 App Quản Lý Tổng Thể</h3>
+                    <p>Số hóa toàn diện hệ thống vận hành gồm:</p>
+                    <ul class="bullet-list">
+                        <li>🏡 Phòng lưu trú</li>
+                        <li>🍽️ Nhà hàng</li>
+                        <li>☕ Coffee Bar</li>
+                        <li>🌿 Trải nghiệm địa phương</li>
+                        <li>🚐 Dịch vụ hỗ trợ & đưa đón</li>
+                    </ul>
+                    <h4 style="margin-top:15px;color:var(--primary);">Chức năng nổi bật</h4>
+                    <ul class="bullet-list">
+                        <li>QR đặt thêm dịch vụ trong thời gian lưu trú</li>
+                        <li>QR thanh toán</li>
+                        <li>Cập nhật thời gian thực trạng thái phòng</li>
+                        <li>Quản lý đặt cọc</li>
+                        <li>Theo dõi Check-in / Check-out</li>
+                        <li>Điều phối Housekeeping</li>
+                        <li>Điều phối bếp</li>
+                        <li>Điều phối tour</li>
+                        <li>Đồng bộ dữ liệu trên một nền tảng duy nhất</li>
+                    </ul>
+                    <a href="https://v-n-anh-mountain-retreat-630837450646.asia-southeast1.run.app/" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:20px;background:var(--primary);color:white;text-decoration:none;padding:12px 20px;border-radius:8px;font-weight:600;">
+                        🚀 Trải nghiệm hệ thống demo →
+                    </a>
+                </div>
+                <div class="card">
+                    <div class="card-price">4.000.000đ</div>
+                    <div class="card-icon"><i class="fa-solid fa-message"></i></div>
+                    <h3>Template báo giá tự động & Tin nhắn CSKH</h3>
+                    <p>Chuẩn hóa bộ mẫu text, bill tính tiền nhanh gọn gửi qua Zalo/Email cho mọi phân khúc khách đoàn, gia đình, cá nhân.</p>
+                </div>
+                <div class="card">
+                    <div class="card-price">6.500.000đ</div>
+                    <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>Hệ thống Google Workspace tích hợp</h3>
+                    <p>Xây dựng hệ thống bảng tính Google Sheet (Doanh thu, Chi phí, Công nợ, Tỷ lệ lấp phòng) & Google Drive lưu trữ bảo mật.</p>
+                </div>
+                <div class="card">
+                    <div class="card-price">10.500.000đ</div>
+                    <div class="card-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+                    <h3>Checklist vận hành & Quy trình tự động hóa</h3>
+                    <p>Bộ checklist dọn phòng, bàn giao vật tư, tích hợp quy trình smartlock/camera an ninh bảo mật từ xa.</p>
+                </div>
+            </div>
+
+            <!-- VISUAL MOODBOARD FOR INTERNAL OS APP -->
+            <div class="visual-showcase">
+                <div class="visual-title"><i class="fa-solid fa-terminal"></i> INTERNAL WORKFLOW APPLICATION INTERFACE</div>
+                <div style="background:white;border-radius:20px;padding:40px;text-align:center;box-shadow:var(--card-shadow);">
+                    <div style="width:80px;height:80px;margin:0 auto 20px;background:var(--primary-light);color:var(--primary);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:32px;">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                    </div>
+                    <h3 style="font-size:2rem;color:var(--primary);margin-bottom:10px;">VAN LINH OS DEMO</h3>
+                    <p style="max-width:700px;margin:0 auto 30px;color:var(--gray);">
+                        Hệ thống vận hành tổng thể dành cho mô hình Retreat, Homestay & Hospitality Services. Quản lý phòng lưu trú, nhà hàng, coffee bar, trải nghiệm địa phương, dịch vụ hỗ trợ và toàn bộ vận hành trên cùng một nền tảng.
+                    </p>
+                    <a href="https://v-n-anh-mountain-retreat-630837450646.asia-southeast1.run.app/" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:var(--primary);color:white;text-decoration:none;padding:16px 28px;border-radius:10px;font-size:1rem;font-weight:700;">
+                        🚀 Trải nghiệm hệ thống demo →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 5: TỔNG HỢP CHI PHÍ -->
+        <div id="tab5" class="tab-content">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2><i class="fa-solid fa-calculator"></i> Bảng tổng hợp ngân sách dự án</h2>
+                </div>
+            </div>
+
+            <div class="summary-box" data-aos="zoom-in">
+                <table class="total-table">
+                    <thead>
+                        <tr style="background: var(--primary-light);">
+                            <th>Hạng mục giải pháp</th>
+                            <th style="text-align: right;">Chi phí triển khai</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Khởi tạo nhận diện thương hiệu cốt lõi sau ưu đãi 50%</td>
+                            <td style="text-align: right; font-weight: 600;">8.500.000 VND</td>
+                        </tr>
+                        <tr>
+                            <td>2. Thiết lập hệ thống kênh bán phòng (OTA & Web)</td>
+                            <td style="text-align: right; font-weight: 600;">21.500.000 VND</td>
+                        </tr>
+                        <tr>
+                            <td>3. Cấu trúc nội dung & Kênh Marketing nền tảng</td>
+                            <td style="text-align: right; font-weight: 600;">12.500.000 VND</td>
+                        </tr>
+                        <tr>
+                            <td>4. Trọn bộ phần mềm & Quy trình vận hành số nội bộ</td>
+                            <td style="text-align: right; font-weight: 600;">53.000.000 VND</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;• App Quản Lý Tổng Thể</td>
+                            <td style="text-align:right;">32.000.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;• Template báo giá & CSKH</td>
+                            <td style="text-align:right;">4.000.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;• Google Workspace tích hợp</td>
+                            <td style="text-align:right;">6.500.000đ</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;• Checklist vận hành & tự động hóa</td>
+                            <td style="text-align:right;">10.500.000đ</td>
+                        </tr>
+                        <tr style="background: var(--primary-light);">
+                            <td><strong>TỔNG CHI PHÍ ĐẦU TƯ (TRỌN GÓI)</strong></td>
+                            <td style="text-align: right;"><strong>95.500.000 VND</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="exclusions-box">
+                    <strong><i class="fa-solid fa-triangle-exclamation"></i> Lưu ý loại trừ quan trọng:</strong> 
+                    <p style="font-size:0.85rem; margin-top:5px; color:#555;">
+                        Báo giá chưa bao gồm VAT, ngân sách chạy quảng cáo trực tiếp, phí commission sàn OTA, chi phí mua thiết bị phần cứng (smartlock, camera) và chi phí sản xuất hình ảnh/quay phim chuyên nghiệp (Đề xuất làm việc cùng đơn vị đối tác: Team anh Minh Trí & Riri Phương Trinh).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 AIGen Labs - Giải pháp số hóa & AI Workflow chuyên sâu cho ngành dịch vụ lưu trú nghỉ dưỡng.</p>
+    </footer>
+
+    <!-- JavaScript For Tabs, Review Slider and Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init Scroll Animation
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Tab Navigation Logic
+        function openTab(tabId, button) {
+            let contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            let buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            button.classList.add('active');
+            
+            // Refresh animation for elements in new tab
+            AOS.refresh();
+        }
+
+        // Google Maps Review Slider Logic
+        let currentReview = 1;
+        const totalReviews = 2;
+
+        function nextReview() {
+            document.getElementById(`rev${currentReview}`).classList.remove('active');
+            currentReview = currentReview >= totalReviews ? 1 : currentReview + 1;
+            document.getElementById(`rev${currentReview}`).classList.add('active');
+        }
+
+        function prevReview() {
+            document.getElementById(`rev${currentReview}`).classList.remove('active');
+            currentReview = currentReview <= 1 ? totalReviews : currentReview - 1;
+            document.getElementById(`rev${currentReview}`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
